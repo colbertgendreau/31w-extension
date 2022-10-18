@@ -1,5 +1,23 @@
 .carrousel {
-  width: 300px;
-  height: 300px;
+  position: absolute;
+  left: 12.5vw;
+  top: 12.5vh;
+  width: 75vw;
+  height: 75vh;
   background: springgreen;
+  transform: scale(0);
+  transition: transform 1s opacity 1s;
+}
+
+.carrousel--ouvrir {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.btn_fermer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
 }/*# sourceMappingURL=style.css.map */

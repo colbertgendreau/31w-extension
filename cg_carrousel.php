@@ -30,14 +30,21 @@ function cgc_enqueue() {
                     plugin_dir_url(__FILE__) . "js/carrousel.js",
                     array(),
                     $version_js,
-                    false);
+                    true);
 }
 
 add_action('wp_enqueue_scripts', 'cgc_enqueue');
 
 function genere_boite() {
 
-    $contenu = "<div class = 'carrousel'>Carrousel</div>";
+    $contenu = "
+                <button class='btn_modale'>boite modale</button>
+                <div class='carrousel'>
+                    <button class='btn_fermer'>X</button>
+                    <figure class='carrousel_figure'></figure>
+                    <form class='carrousel_form'></form>
+                </div>
+                ";
 
 
     return $contenu;
