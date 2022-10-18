@@ -1,12 +1,12 @@
 .carrousel {
-  position: absolute;
+  position: fixed;
   left: 12.5vw;
   top: 12.5vh;
   width: 75vw;
-  height: 75vh;
   background: springgreen;
   transform: scale(0);
   transition: transform 1s opacity 1s;
+  z-index: 1;
 }
 
 .carrousel--ouvrir {
@@ -20,4 +20,15 @@
   top: 0;
   width: 2rem;
   height: 2rem;
+  z-index: 1;
+}
+
+.carrousel__figure__img {
+  display: block;
+  left: 0;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
