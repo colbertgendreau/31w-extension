@@ -3,6 +3,7 @@
   left: 12.5vw;
   top: 12.5vh;
   width: 75vw;
+  height: 50vh;
   background: springgreen;
   transform: scale(0);
   transition: transform 1s opacity 1s;
@@ -31,4 +32,13 @@
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.carrousel__form {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

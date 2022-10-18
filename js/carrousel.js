@@ -1,5 +1,9 @@
 (function(){
     console.log("carrousel");
+
+    /*----------------- Initialisation des compteurs */
+    let index = 0;
+
     /*************************** Les éléments du carrousel ****************************/
     /** Le conteneur du carrousel */
     let elmCarrousel = document.querySelector(".carrousel");
@@ -23,7 +27,7 @@
         console.log(elmImg.getAttribute("src"));
 
         ajouter_img_carrousel(elmImg);
-        // ajouter_radio_carrousel();
+        ajouter_radio_carrousel();
 
     }
 
@@ -31,9 +35,26 @@
         let elmCarrousel__figure__img = document.createElement('img');
         elmCarrousel__figure__img.setAttribute('src', elmImg.getAttribute('src'));
         elmCarrousel__figure__img.classList.add('carrousel__figure__img');
+        
         elmCarrousel__figure.appendChild(elmCarrousel__figure__img);
     }
 
+    /** Ajout d'un radio dans le carrousel */
+    function ajouter_radio_carrousel() {
+        let elmCarrousel__form__radio = document.createElement('input');
+        elmCarrousel__form__radio.type = 'radio';
+        elmCarrousel__form__radio.setAttribute('name', 'carrousel__form__radio');
+        elmCarrousel__form__radio.setAttribute('class', 'carrousel__form__radio');
+        elmCarrousel__form__radio.dataset.index = index;
+        index++;
+        elmCarrousel__form.appendChild(elmCarrousel__form__radio);
+        elmCarrousel__form__radio.addEventListener('mousedown', function() {
+            console.log(this.dataset.index);
+        })
+
+
+
+    }
     
     elmBtnModale.addEventListener('mousedown', function(){
         console.log("bouton boite modale");

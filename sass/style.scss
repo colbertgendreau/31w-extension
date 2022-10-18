@@ -3,7 +3,7 @@
     left: 12.5vw;
     top: 12.5vh;
     width: 75vw;
-    // height: 30vh;
+    height: 50vh;
     background: springgreen;
     transform: scale(0);
     transition: transform 1s opacity 1s;
@@ -44,6 +44,12 @@
 
 .carrousel__figure__img--activer{}
 
-.gallerie {
-    
+.carrousel__form{
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+
 }
