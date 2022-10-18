@@ -52,7 +52,10 @@
         elmCarrousel__form.appendChild(elmCarrousel__form__radio);
         elmCarrousel__form__radio.addEventListener('mousedown', function() {
             console.log(this.dataset.index);
-            elmCarrousel.classList.remove('carrousel__figure__img--activer');
+            if (elmCarrousel.querySelector('carrousel__figure__img--activer') != null) {
+
+                elmCarrousel.querySelector('carrousel__figure__img--activer').classList.remove('carrousel__figure__img--activer');
+            }
             elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer');
         })
 
