@@ -35,7 +35,7 @@
         let elmCarrousel__figure__img = document.createElement('img');
         elmCarrousel__figure__img.setAttribute('src', elmImg.getAttribute('src'));
         elmCarrousel__figure__img.classList.add('carrousel__figure__img');
-        
+        elmCarrousel__figure__img.dataset.index = index;
         elmCarrousel__figure.appendChild(elmCarrousel__figure__img);
     }
 
