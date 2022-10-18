@@ -29,9 +29,19 @@
   left: 0;
   object-fit: cover;
   overflow: hidden;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  transition: opacity 1s;
+}
+
+.carrousel__figure__img--inactive {
+  opacity: 0;
+}
+
+.carrousel__figure__img--activer {
+  opacity: 1;
 }
 
 .carrousel__form {

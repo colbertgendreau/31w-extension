@@ -3,6 +3,7 @@
 
     /*----------------- Initialisation des compteurs */
     let index = 0;
+    let dernierIndex = -1;
 
     /*************************** Les éléments du carrousel ****************************/
     /** Le conteneur du carrousel */
@@ -47,9 +48,12 @@
         elmCarrousel__form__radio.setAttribute('class', 'carrousel__form__radio');
         elmCarrousel__form__radio.dataset.index = index;
         index++;
+        dernierIndex++;
         elmCarrousel__form.appendChild(elmCarrousel__form__radio);
         elmCarrousel__form__radio.addEventListener('mousedown', function() {
             console.log(this.dataset.index);
+            elmCarrousel.classList.remove('carrousel__figure__img--activer');
+            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer');
         })
 
 
