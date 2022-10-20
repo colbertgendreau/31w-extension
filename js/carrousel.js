@@ -25,19 +25,31 @@
     /** Étape 1 : Parcourir les images de la galerie */
     
     for (const elmImg of elmGalerieImg) {
-        console.log(elmImg.getAttribute("src"));
 
         ajouter_img_carrousel(elmImg);
         ajouter_radio_carrousel();
+        elImg.dataset.index = index;
+        index++;
+
+        /** Ecouteur sur les images du ce la gallerie */
+        elmImg.addEventListener("mousedown", function() {
+            elmCarrousel.classList.add("carrousel--ouvrir");
+            elmCarrousel__figure.children[this.dataset.index].classList.add("carrousel__figure__ing--activer");
+        });
+        elmCarrousel__form__radio.children[this.dataset.index].checked = true.
+        dernierIndex = this.dataset.index;
+
 
     }
 
     function ajouter_img_carrousel(elmImg) {
+        elmCarrousel__figure__img.dataset.index = index;
         let elmCarrousel__figure__img = document.createElement('img');
         elmCarrousel__figure__img.setAttribute('src', elmImg.getAttribute('src'));
         elmCarrousel__figure__img.classList.add('carrousel__figure__img');
         elmCarrousel__figure__img.dataset.index = index;
         elmCarrousel__figure.appendChild(elmCarrousel__figure__img);
+
     }
 
     /** Ajout d'un radio dans le carrousel */
@@ -73,3 +85,5 @@
         elmCarrousel.classList.remove("carrousel--ouvrir");
     })
 })()
+
+
