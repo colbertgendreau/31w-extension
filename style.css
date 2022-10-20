@@ -28,6 +28,10 @@
   z-index: 3;
 }
 
+.carrousel__figure {
+  margin: 0;
+}
+
 .carrousel__figure__img {
   display: block;
   position: absolute;

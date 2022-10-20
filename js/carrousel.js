@@ -34,11 +34,16 @@
         console.log("galerie");
         console.log("elmImg.dataset.index" + this.dataset.index);
         elmCarrousel.classList.add("carrousel--ouvrir");
+        if (dernierIndex != -1) {
+            elmCarrousel__figure.children[dernierIndex].classList.remove(
+              "carrousel__figure__img--activer"
+            );
+          }
         elmCarrousel__figure.children[this.dataset.index].classList.add(
           "carrousel__figure__img--activer"
         );
         elmCarrousel__form.children[this.dataset.index].checked = true;
-        console.log(index);
+        console.log(this.dataset.index);
         dernierIndex = this.dataset.index;
       });
     }
