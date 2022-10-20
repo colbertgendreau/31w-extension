@@ -1,64 +1,60 @@
+
+
 .carrousel {
-    position:fixed;
+    position: absolute;
     left: 12.5vw;
     top: 12.5vh;
     width: 75vw;
-    height: 50vh;
-    background: springgreen;
+    height: 75vh;
+    background-color: aqua;
     transform: scale(0);
-    transition: transform 1s opacity 1s;
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
     z-index: 1;
-}
-
-.carrousel--ouvrir {
-
+  }
+  
+  .carrousel--ouvrir {
     transform: scale(1);
     opacity: 1;
-
-}
-
-.btn_fermer {
+  }
+  
+  .btn_fermer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 4px;
+    top: 4px;
     width: 2rem;
     height: 2rem;
-    z-index: 1;
-
-}
-
-.carrousel__figure{
-    margin: 0;
-}
-
-.carrousel__figure__img{
+    z-index: 3;
+  }
+  
+  .carrousel__figure {
+  }
+  
+  .carrousel__figure__img {
     display: block;
-    left: 0;
+    position: absolute;
     object-fit: cover;
-    overflow: hidden;
-    opacity: 0;
-    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    // height: 100%;
-    transition: opacity 1s;
-}
-
-.carrousel__figure__img--inactive{
+    height: 100%;
     opacity: 0;
-
-}
-.carrousel__figure__img--activer{
+    transition: opacity 1s;
+    //z-index: 2;
+  }
+  .carrousel__figure__img--activer {
     opacity: 1;
-
-}
-
-.carrousel__form{
-    bottom: 0;
-    display: flex;
+  }
+  
+  .carrousel__form {
     position: absolute;
+    bottom: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
+    display: flex;
     justify-content: center;
-
-}
+    margin: 1rem;
+  }
