@@ -32,9 +32,19 @@
     z-index: 3;
   }
 
-  // .btn_prev {
-  //   z-index: 2;
-  // }
+  .elmCarrousel__fleche__prev {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    // bottom: -20px;
+  }
+  .elmCarrousel__fleche__next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    // bottom: -20px;
+  }
   
   .carrousel__figure {
     margin: 0;
@@ -57,6 +67,7 @@
   }
   
   .carrousel__form {
+    display: flex;
     position: absolute;
     bottom: 0;
     width: 100%;
