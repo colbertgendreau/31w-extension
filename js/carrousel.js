@@ -89,10 +89,13 @@
       });
     }
   
-    elmBtnModale.addEventListener("mousedown", function () {
-      console.log("bouton boîte modale");
-      elmCarrousel.classList.add("carrousel--ouvrir");
-    });
+    /**
+     * Navigtion avec fleches dans le carrousel
+     */
+
+
+
+    
     //////////////////////////////////////////////////
     elmBtnModaleFermer.addEventListener("mousedown", function () {
       elmCarrousel.classList.remove("carrousel--ouvrir");
