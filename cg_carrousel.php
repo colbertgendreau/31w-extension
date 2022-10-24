@@ -46,6 +46,7 @@ function genere_boite() {
                 </div>
                 ";
 
+                
 
     return $contenu;
 }
