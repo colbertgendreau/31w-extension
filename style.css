@@ -16,6 +16,10 @@
   opacity: 1;
 }
 
+.btn_modale {
+  opacity: 0;
+}
+
 .btn_fermer {
   display: flex;
   align-items: center;
