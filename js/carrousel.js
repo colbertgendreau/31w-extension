@@ -28,7 +28,6 @@
   let elmGalerie = document.querySelector(".galerie");
   let elmGalerieImg = document.querySelectorAll(".galerie figure img");
 
-  naviguer_fleche_suivant();
   /* ----------------------------- Étape 1 parcourir les images de la galerie */
 
   for (const elmImg of elmGalerieImg) {
@@ -97,56 +96,40 @@
   }
 
   /**
-   * Navigtion avec fleches dans le carrousel
-   */
-  function naviguer_fleche_suivant() {
-    
-    let elmCarrousel__fleche__next = document.createElement("button");
-    elmCarrousel__fleche__next.setAttribute("class", "carrousel__fleche__next");
-    elmCarrousel__fleche__next.dataset.index = index;
-    elmCarrousel__form.appendChild(elmCarrousel__fleche__next);
-    /* ------------------------ écouteur sur radio pour afficher une nouvelle image */
-    elmCarrousel__fleche__next.addEventListener("mousedown", function () {
-      console.log(this.dataset.index);
-      
+  * Navigtion avec fleches dans le carrousel
+  * Next
+  */
+   elmCarrousel__fleche__next.addEventListener('mousedown', function() {
+    if(dernierIndex < elmGalerieImg.length - 1) {
       elmCarrousel__figure.children[dernierIndex].classList.remove(
         "carrousel__figure__img--activer"
-        );
-        
-        elmCarrousel__figure.children[this.dataset.index].classList.add(
-          "carrousel__figure__img--activer"
-          );
-          console.log(index);
-          index++;
-          dernierIndex = this.dataset.index;
-    });
+      );
+      dernierIndex++;
+      elmCarrousel__figure.children[dernierIndex].classList.add(
+        "carrousel__figure__img--activer"
+      );
+    }
+    elmCarrousel__form.children[dernierIndex].checked = true;
+   })
+
+   /**
+  * Navigtion avec fleches dans le carrousel
+  * Previous
+  */
+   elmCarrousel__fleche__prev.addEventListener('mousedown', function() {
+    if(dernierIndex > 0) {
+      elmCarrousel__figure.children[dernierIndex].classList.remove(
+        "carrousel__figure__img--activer"
+      );
+      dernierIndex--;
+      elmCarrousel__figure.children[dernierIndex].classList.add(
+        "carrousel__figure__img--activer"
+      );
+    }
+    elmCarrousel__form.children[dernierIndex].checked = true;
+   })
 
 
-
-
-
-
-
-
-
-
-
-    // elmCarrousel__fleche__next.addEventListener("mousedown", function () {
-    //   index++;
-
-    //   if (dernierIndex != -1) {
-    //     elmCarrousel__figure.children[dernierIndex].classList.remove(
-    //       "carrousel__figure__img--activer"
-    //     );
-    //   }
-
-    //   elmCarrousel__figure.children[this.dataset.index].classList.add(
-    //     "carrousel__figure__img--activer"
-    //   );
-    //   console.log(index);
-    //   dernierIndex = this.dataset.index;
-    // });
-  }
 
   //////////////////////////////////////////////////
   elmBtnModaleFermer.addEventListener("mousedown", function () {

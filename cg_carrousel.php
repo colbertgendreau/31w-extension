@@ -43,6 +43,8 @@ function genere_boite() {
                     <button class='btn_fermer'>X</button>
                     <form class='carrousel__form'></form>
                     <figure class='carrousel__figure'></figure>
+                    <button class='elmCarrousel__fleche__prev'>Prev</button>
+                    <button class='elmCarrousel__fleche__next'>Next</button>
 
                 </div>
                 ";
