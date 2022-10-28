@@ -6,3 +6,5 @@ Pour accéder a l'extension, il faut cliquer sur mon nom, dans le menu secondair
 
 Une extension carrousel pour le thème WordPress, il s'ouvre lorsqu'une image est cliquée 
 et il est possible de naviguer avec des boutons radios ou des boutons "avant" et "après", ou en cliquant sur les autres images.
+
+L'extension est accessible au https://prom4.sg-host.com/
